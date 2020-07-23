@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="comic.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <a href="#">Reload</a>
+    <div id="comic">
+      <div id="panel_1">
+        <div id="blind_1"></div>
+        <div id="blind_2"></div>
+      </div>
+
+      <div id="panel_2">
+        <div id="blind_3"></div>
+        <div id="blind_4"></div>
+      </div>
+
+      <div id="panel_3">
+        <div id="blind_5"></div>
+        <div id="blind_6"></div>
+      </div>
+
+      <div id="panel_4">
+        <div id="blind_7"></div>
+        <div id="blind_8"></div>
+        <div id="blind_9"></div>
+      </div>
+    </div>
+
+    <script>
+$(function() {
+  let $blinds = $('[id^=blind]');
+  let speed = 250;
+  let delay = 1500;
+
+  function startAnimation() {
+    $blinds.each(function(i) {
+      var $blind = $blinds.eq(i);
+      let currentDelay = delay * i + speed;
+
+      $blind.delay(currentDelay).animate({
+        top: '+=' + $blind.attr('height'),
+        height: 0,
+      }, 250);
+    });
+  }
+
+  $('a').click(function(e) {
+    event.preventDefault();
+    $blinds.finish().removeAttr("style");
+    startAnimation();
+  });
+
+  startAnimation();
+});
+
+    </script>
+  </body>
+</html>

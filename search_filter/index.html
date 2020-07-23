@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Search Filter</title>
+    <meta charset="utf-8" />
+    <style>
+
+body {
+  background-color: #E9D788;
+  margin: 50px;
+}
+
+.page {
+  display: flex;
+  background-color: #ffffff;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.games {
+  list-style: none;
+}
+
+li {
+  padding: 10px 0;
+}
+
+li + li {
+  border-top: 2px solid grey;
+}
+
+.highlight {
+  background-color: #93E88E;
+}
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <aside class="filters">
+        <label>
+          <input value="Nintendo 3DS" type="checkbox" checked>
+          Nintendo 3DS
+        </label>
+        <label>
+          <input value="Nintendo WiiU" type="checkbox" checked>
+          Nintendo 3DS
+        </label>
+        <label>
+          <input value="PlayStation 4" type="checkbox" checked>
+          Playstation 4
+        </label>
+        <label>
+          <input value="Xbox One" type="checkbox" checked>
+          Xbox One
+        </label>
+      </aside>
+      <main>
+        <h1>Games</h1>
+        <ul class="games">
+          <li data-id="1">The Legend of Zelda: Majora's Mask 3D</li>
+          <li data-id="2">Super Smash Bros</li>
+          <li data-id="3">Super Smash Bros</li>
+          <li data-id="4">LEGO Batman 3: Beyond Gotham</li>
+          <li data-id="5">LEGO Batman 3: Beyond Gotham</li>
+          <li data-id="6">LEGO Batman 3: Beyond Gotham</li>
+          <li data-id="7">Far Cry 4</li>
+          <li data-id="8">Far Cry 4</li>
+          <li data-id="9">Call of Duty: Advanced Warfare</li>
+          <li data-id="10">Call of Duty: Advanced Warfare</li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>
